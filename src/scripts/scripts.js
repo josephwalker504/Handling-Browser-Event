@@ -1,24 +1,31 @@
 let pleaseWork = document.getElementById("message")
 console.log("Did it work", pleaseWork)
 
+let willWork = document.getElementById("boxes")
+console.log("maybe", willWork)
+
+
+
 const keyUpClick = (event) => {
-    console.log("Are you working", event)
+  console.log(event)
+  willWork.innerHTML = event.target.value
+} 
+for (let i =0; i< willWork.length; i++) { 
+  console.log(willWork.item(i))
 }
-pleaseWork.addEventListener("keyup", keyUpClick)
+pleaseWork.addEventListener("keyup", keyUpClick) 
+  
 
 
 
-const willWork = document.querySelectorAll("article")
 
-console.log("This will work", willWork)
+// const keyUpClickArticle = () => {
+//   console.log("Still Working !!!", event)
+  // willWork.addEventListener("keyup", willWork)
+// }
 
-const keyUpClickArticle = () => {
-  console.log("Still Working !!!", event)
-  willWork.addEventListener("keyup", willWork)
-}
+// let wrapAllKeyp =document.getElementById("wrapBox")
 
-let wrapAllKeyp =document.getElementById("wrapBox")
-
-wrapBox.addEventListener('input', function(event) {
-    wrapBox.innerText = event.target.value.split('').join('')
-  })
+// wrapBox.addEventListener('input', function(event) {
+//     wrapBox.innerText = event.target.value
+//   })
